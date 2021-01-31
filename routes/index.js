@@ -3,13 +3,11 @@ const router = express.Router();
 
 
 
-router.get('/', function(req, res, next) {
+router.post('/task', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/task/:taskId', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
