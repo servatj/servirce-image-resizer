@@ -1,3 +1,5 @@
+const md5file = require('md5-file');
+
 const store = {
     tasks: [], 
     images: []
@@ -13,7 +15,7 @@ const storeTask = async ({ path }) => {
     store.tasks.push(task);
 }
 
-const storeImage = ({ path }) => {
+const storeImage = async ({ path }) => {
   const image = {
     id: store.images.length,
     timestamp: new Date(),
