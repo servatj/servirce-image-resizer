@@ -15,12 +15,12 @@ const storeTask = async ({ path }) => {
     store.tasks.push(task);
 }
 
-const storeImage = async ({ path }) => {
+const storeImage = async ({ path, md5string }) => {
   const image = {
     id: store.images.length,
     timestamp: new Date(),
     path,
-    md5: await md5File(path),
+    md5: md5string,
   }
   store.tasks.push(image);
 }
