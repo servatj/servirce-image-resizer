@@ -8,13 +8,15 @@ router.post('/task', async function(req, res) {
 });
 
 router.get('/task/:taskId', async function(req, res) {
-  res.status(200);
-  res.send('result');
+  res
+  .status(200)
+  .send('result');
 });
 
 router.get('/', async function(req, res) {
-  res.status(200); 
-  res.send('home');
+  res
+  .status(200)
+  .send('home');
 });
 
 module.exports = router;
