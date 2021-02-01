@@ -2,13 +2,19 @@ const express = require('express');
 const router = express.Router();
 
 
-
-router.post('/task', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.post('/task', async function(req, res) {
+  res.status(200);
+  res.send();
 });
 
-router.get('/task/:taskId', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/task/:taskId', async function(req, res) {
+  res.status(200);
+  res.send('result');
+});
+
+router.get('/', async function(req, res) {
+  res.status(200); 
+  res.send('home');
 });
 
 module.exports = router;
